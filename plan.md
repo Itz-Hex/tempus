@@ -16,6 +16,7 @@ Adding, editing or deleting tasks will trigger a reschedule so changes can be ha
 
 ## Core
 
+- [ ] Authentication
 - [ ] Create/edit/delete tasks
 - [ ] Automatic scheduling into available time
 - [ ] Manual override / drag-to-reschedule
@@ -124,6 +125,7 @@ for each task:
         else:
             deadlineProximityFactor = e^(-x / DECAY_K)
     urgency = task computed priority * deadlineProximityFactor * (1 + task push count * PUSH_MULTIPLIER)
+    add task and urgency to weightedTasks
 
 sort weightedTasks by urgency descending then by created at ascending
 
@@ -160,14 +162,31 @@ return the updated schedule and list of conflicted tasks for review
 
 # Non-functional requirements
 
+- [ ] Timezones
+- [ ] Performance
+- [ ] Authentication
+
 # Test scenarios
+
+fast-check is standard for property-based testing.
+vitest or jest for unit/integration
+playright for e2e testing
+
+Write tests before confidence in functionality.
+
+## Unit tests
+(Tests one function in isolation with controlled input)
+
+
+
+## Integration tests
+(Tests piece work together)
+
+## End to end tests
+(Simulate a real user clicking through the UI)
 
 # Open questions
 
 How to handle recurring tasks?
 How to handle hobbies?
-
-# Adaptive layer
-
-# Milestones
 
