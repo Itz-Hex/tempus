@@ -24,13 +24,15 @@ export function SignInForm({
     className,
     ...props
 }: React.ComponentProps<"div">) {
+
+
     return (
         <div className={cn("flex flex-col gap-6", className)} {...props}>
             <Card>
                 <CardHeader className="text-center">
                     <CardTitle className="text-xl">Welcome back</CardTitle>
                     <CardDescription>
-                        Sign in with your Apple or Google account
+                        Sign in with your Github or Google account
                     </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -58,12 +60,12 @@ export function SignInForm({
                             <Field>
                                 <div className="flex items-center">
                                     <FieldLabel htmlFor="password">Password</FieldLabel>
-                                    <a
-                                        href="/forgot-password"
+                                    <Button
+                                        variant={"link"}
                                         className="ml-auto text-sm underline-offset-4 hover:underline"
                                     >
                                         Forgot your password?
-                                    </a>
+                                    </Button>
                                 </div>
                                 <Input id="password" type="password" required />
                             </Field>

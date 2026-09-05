@@ -29,7 +29,7 @@ export function SignUpForm({
                 <CardHeader className="text-center">
                     <CardTitle className="text-xl">Create your account</CardTitle>
                     <CardDescription>
-                        Sign up with your Apple or Google account
+                        Sign up with your Github or Google account
                     </CardDescription>
                 </CardHeader>
                 <CardContent>
